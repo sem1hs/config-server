@@ -1,3 +1,13 @@
+server:
+  port: 8888
+
 spring:
   application:
     name: news-microservices-config
+
+  cloud:
+      config:
+        server:
+          git:
+            uri: https://github.com/sem1hs/news-microservices-config
+            default-label: main
