@@ -27,3 +27,7 @@ eureka:
 
 jwt:
   secret: 9W5XgXodMr4OQ5QGm4ReV9FbtVqnM3MCHazU14ols/k=
+
+management:
+  security:
+    sessions=always:
