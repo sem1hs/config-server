@@ -14,8 +14,8 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) {
 
         httpSecurity
-                .csrf(csrf -> csrf.ignoringRequestMatchers("/encrypt/**", "/decrypt/**"))
-                .authorizeHttpRequests(auth -> auth.anyRequest().authenticated());
+                .csrf(csrf -> csrf.ignoringRequestMatchers("/encrypt/**", "/decrypt/**"));
+
 
         return httpSecurity.build();
     }
