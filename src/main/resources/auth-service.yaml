@@ -23,6 +23,7 @@ spring:
 eureka:
   client:
     register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
   instance:
@@ -31,3 +32,5 @@ eureka:
 
 jwt:
   secret: 9W5XgXodMr4OQ5QGm4ReV9FbtVqnM3MCHazU14ols/k=
+  access-token-expiration: 900000 # 1000 * 60 * 15 - 15 Dakika
+  refresh-token-expiration: 604800000 # 1000 * 60 * 60 * 24 * 7 - 1 Hafta
