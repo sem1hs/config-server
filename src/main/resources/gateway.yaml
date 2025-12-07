@@ -18,6 +18,9 @@ spring:
               uri: lb://news-service
               predicates:
                 - Path=/api/v1/news/**
+          discovery:
+            locator:
+              enabled: true
 
 eureka:
   client:
