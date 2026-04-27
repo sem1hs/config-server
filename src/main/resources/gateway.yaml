@@ -56,3 +56,16 @@ eureka:
 
 jwt:
   key: 9W5XgXodMr4OQ5QGm4ReV9FbtVqnM3MCHazU14ols/k=
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
+
+logging:
+  pattern:
+    level: "%5p [gateway,traceId=%X{traceId},spanId=%X{spanId}]"
