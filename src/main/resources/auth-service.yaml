@@ -35,3 +35,17 @@ jwt:
   access-token-expiration: 900000 # 1000 * 60 * 15 - 15 Dakika
   refresh-token-expiration: 604800000 # 1000 * 60 * 60 * 24 * 7 - 1 Hafta
   service-token-expiration: 3600000 # 1 Saat
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+    export:
+      zipkin:
+        endpoint: http://zipkin:9411/api/v2/spans
+
+logging:
+  pattern:
+    correlation: "[${spring.application.name},%X{traceId:-},%X{spanId:-}] "
+  include-application-name: false
