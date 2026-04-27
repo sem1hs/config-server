@@ -40,10 +40,10 @@ management:
     sampling:
       probability: 1.0
 
-  zipkin:
-    tracing:
-      endpoint: http://zipkin:9411/api/v2/spans
+    export:
+      zipkin:
+        endpoint: http://zipkin:9411/api/v2/spans
 
 logging:
   pattern:
-    level: "%5p [teams-service,traceId=%X{traceId},spanId=%X{spanId}]"
+    level: "%5p [${spring.application.name},traceId=%X{traceId},spanId=%X{spanId}]"
