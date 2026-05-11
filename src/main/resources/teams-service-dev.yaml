@@ -38,4 +38,4 @@ jwt:
 football:
   api:
     base-url: https://v3.football.api-sports.io
-    key: f29b0b0e447e84a209ed3427f81b7432
+    key: ${FOOTBALL_API_KEY}
